@@ -1,3 +1,3 @@
-const baseUrl = "https://kavelida-mern.azurewebsites.net";
+const baseUrl = "https://kavelida-simplewebapp.azurewebsites.net";
 
 export default baseUrl;
