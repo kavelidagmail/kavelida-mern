@@ -1,3 +1,3 @@
-const baseUrl = "http://localhost:3001";
+const baseUrl = "https://kavelida-mern.azurewebsites.net";
 
 export default baseUrl;
