@@ -12,6 +12,7 @@ function App() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
+    console.log('process env is:', JSON.stringify(process.env));
     axios
       .get(`${baseUrl}/get-users`)
       .then((res) => setUsers(res.data))
