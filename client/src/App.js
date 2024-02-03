@@ -2,11 +2,13 @@ import { useEffect } from "react";
 import "./App.css";
 import baseUrl from "./baseUrl";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const params = searchParams.get("key1");
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -19,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <h1>READ not the list</h1>
-
+      <div>{JSON.stringify(params)}</div>
       {users &&
         users.length > 0 &&
         users.map((user) => {
@@ -32,7 +34,7 @@ function App() {
           );
         })}
 
-      <button onClick={() => navigate("create")}>Create</button>
+      <button onClick={() => navigate("create")}>Create1</button>
     </div>
   );
 }

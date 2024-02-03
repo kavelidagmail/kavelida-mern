@@ -12,7 +12,7 @@ app.use(cors());
 
 
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI || "mongodb://localhost:27017/")
   .then(() => console.log("Database is connected..."))
   .catch((err) => console.log(err));
 
